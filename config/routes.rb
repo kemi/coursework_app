@@ -1,4 +1,16 @@
 CourseworkApp::Application.routes.draw do
+  get "pages/enquiry_service"
+
+  get "pages/services_support"
+
+  get "pages/information_advice"
+
+  get "pages/recording_tools"
+
+  get "pages/submit_your_sightings"
+
+  get "pages/about"
+
   get "pages/home"
 
   get "pages/contact"
