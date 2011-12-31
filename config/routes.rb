@@ -1,4 +1,9 @@
 CourseworkApp::Application.routes.draw do
+  #get "users/new"
+resources :users
+
+   match '/signup', :to => 'users#new'
+
     match '/enquiry_service', :to => 'pages#enquiry_service'
   #get "pages/enquiry_service"
 
