@@ -1,19 +1,29 @@
 CourseworkApp::Application.routes.draw do
-  get "pages/enquiry_service"
+    match '/enquiry_service', :to => 'pages#enquiry_service'
+  #get "pages/enquiry_service"
 
-  get "pages/services_support"
+  #get "pages/services_support"
+    match '/services_support', :to => 'pages#services_support'
 
-  get "pages/information_advice"
+  #get "pages/information_advice"
+    match '/information_advice', :to => 'pages#information_advice'
 
-  get "pages/recording_tools"
+  #get "pages/recording_tools"
+    match '/recording_tools', :to => 'pages#recording_tools'
 
-  get "pages/submit_your_sightings"
+  #get "pages/submit_your_sightings"
+    match '/submit_your_sightings', :to => 'pages#submit_your_sightings'
 
-  get "pages/about"
+  #get "pages/about"
+    match '/about', :to => 'pages#about'
 
-  get "pages/home"
+  #get "pages/home"
 
-  get "pages/contact"
+  #get "pages/contact"
+    match '/contact', :to => 'pages#contact'
+    match '/help', :to => 'pages#help'
+    root :to => 'pages#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
