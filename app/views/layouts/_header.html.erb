@@ -9,7 +9,11 @@
       <li><%= link_to "Submit your Sightings", submit_your_sightings_path %></li>
       <li><%= link_to "About Us", about_path %></li>
       <li><%= link_to "Contact Us", contact_path %></li>
-      <li><%= link_to "Sign in", '#' %></li>
+      <% if signed_in? %>
+      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <% else %>
+      <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
     </ul>
   </nav>
 </header>
