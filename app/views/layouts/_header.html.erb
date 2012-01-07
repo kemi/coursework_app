@@ -1,19 +1,15 @@
 <header>
-  <%= link_to logo, root_path %>
+  <%= image_tag("logo.jpg", :alt => "SIBC", :class => "round") %>
   <nav class="round">
     <ul>
       <li><%= link_to "Home", root_path %></li>
-      <% if signed_in? %>
-       <li><%= link_to "Users", users_path %></li>
-      <li><%= link_to "Profile", current_user %></li>
-       <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-      <% end %>
-      <li><%= link_to "Help", help_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to "Sign in", signin_path %></li>
-      <% end %>
+      <li><%= link_to "Enquiry Service", enquiry_service_path %></li>
+      <li><%= link_to "Services and Support", services_support_path %></li>
+      <li><%= link_to "Recording Tools", recording_tools_path %></li>
+      <li><%= link_to "Submit your Sightings", submit_your_sightings_path %></li>
+      <li><%= link_to "About Us", about_path %></li>
+      <li><%= link_to "Contact Us", contact_path %></li>
+      <li><%= link_to "Sign in", '#' %></li>
     </ul>
   </nav>
 </header>

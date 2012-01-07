@@ -1,4 +1,19 @@
 CourseworkApp::Application.routes.draw do
+  #get "pages/News"
+match '/News', :to => 'pages#News'
+
+  #get "pages/FAQ"
+ match '/FAQ', :to => 'pages#FAQ'
+
+  #get "pages/Vacancies"
+match '/Vacancies', :to => 'pages#Vacancies'
+
+  #get "pages/Useful_Links"
+  match '/Useful Links', :to => 'pages#Usefullinks'
+
+  #get "pages/Terms_and_conditions"
+  match '/Terms and conditions', :to => 'pages#Terms'
+
   #get "sessions/new"
 
   #get "users/new"
@@ -26,7 +41,7 @@ resources :sessions, :only => [:new, :create, :destroy]
 
   #get "pages/about"
     match '/about', :to => 'pages#about'
-
+  
   #get "pages/home"
 
   #get "pages/contact"

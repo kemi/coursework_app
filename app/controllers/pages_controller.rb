@@ -33,5 +33,24 @@ class PagesController < ApplicationController
   def help
      @title = "Help"
    end
+def News
+     @title = "News"
+   end
+def FAQ
+     @title = "FAQ"
+   end
+def Vacancies
+     @title = "Vacancies"
+   end
+def Usefullinks
+     @title = "Useful Links"
+   end
+def Terms
+     @title = "Terms and Conditions"
+   end
+
+
+
+
 
 end
