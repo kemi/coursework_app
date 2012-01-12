@@ -15,8 +15,10 @@ class User < ActiveRecord::Base
 
 
    has_many :microposts, :dependent => :destroy
+   #has_many :species
 
- email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
 
  validates :name, :presence => true
                   
@@ -32,6 +34,7 @@ class User < ActiveRecord::Base
    def feed
     # This is preliminary. See Chapter 12 for the full implementation.
     Micropost.where("user_id = ?", id)
+    #Specie.where("user_id = ?", id)
   end
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -43,6 +46,7 @@ class User < ActiveRecord::Base
     return nil  if user.nil?
     return user if user.has_password?(submitted_password)
   end
+  
   def self.authenticate_with_salt(id, cookie_salt)
      user = find_by_id(id)
       (user && user.salt == cookie_salt) ? user : nil
@@ -67,7 +71,6 @@ end
       Digest::SHA2.hexdigest(string)
     end
 
-
-		  
+	  
 end
 

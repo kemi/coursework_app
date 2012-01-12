@@ -1,5 +1,6 @@
 CourseworkApp::Application.routes.draw do
   #get "pages/News"
+   get "species/new"
 match '/News', :to => 'pages#News'
 
   #get "pages/FAQ"
@@ -20,7 +21,11 @@ match '/Vacancies', :to => 'pages#Vacancies'
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
 resources :microposts, :only => [:create, :destroy]
+resources :species
 
+     
+   #match '/Add record', :to => 'specie#index'
+   #match '/Delete record', :to => 'specie#index'
    match '/signup', :to => 'users#new'
    match '/signin', :to => 'sessions#new'
    match '/signout', :to => 'sessions#destroy'
@@ -35,7 +40,7 @@ resources :microposts, :only => [:create, :destroy]
     match '/information_advice', :to => 'pages#information_advice'
 
   #get "pages/recording_tools"
-    match '/recording_tools', :to => 'pages#recording_tools'
+    match '/recording_tools', :to => 'species#new'
 
   #get "pages/submit_your_sightings"
     match '/submit_your_sightings', :to => 'pages#submit_your_sightings'

@@ -1,0 +1,66 @@
+<h1>Specie Recorder</h1>
+
+<%= form_for(:submit_your_sightings, :url => submit_your_sightings_path) do |f| %>
+  <div class="field">
+    <%= f.label : specie_name%><br />
+    <%= f.text_field :species_name %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.text_field :sex %>
+  </div>
+   <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br />
+    <%= f.text_field :origin %>
+  </div>
+   <div class="field">
+    <%= f.label :grid_reference %><br />
+    <%= f.text_field :grid_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.text_field :start_date %>
+  </div>
+   <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.text_field :end_date %>
+  </div>
+   <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+   <div class="field">
+    <%= f.label :observer %><br />
+    <%= f.text_field :observer %>
+  </div>
+   <div class="field">
+    <%= f.label :record_type %><br />
+    <%= f.text_field :record_type %>
+  </div>
+   <div class="field">
+    <%= f.label :determiner %><br />
+    <%= f.text_field :determiner %>
+  </div>
+   <div class="field">
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </div>
+   <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add Record" %>
+  </div>
+<% end %>
+
+<p>Download Recorder? <%= link_to "Recording Tools!", recording_tools_path %></p>
+

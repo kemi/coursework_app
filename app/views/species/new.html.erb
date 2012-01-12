@@ -1,0 +1,64 @@
+<h1>Record Species</h1>
+
+<%= form_for(@specie) do |f| %>
+
+  <div class="field">
+    <%= f.label :Specie_Name %><br />
+    <%= f.text_field :Specie_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Sex %><br />
+    <%= f.text_field :Sex %>
+  </div>
+  <div class="field">
+    <%= f.label :Location %><br />
+    <%= f.text_field :Location %>
+  </div>
+ <div class="field">
+    <%= f.label :County %><br />
+    <%= f.text_field :County %>
+  </div>
+<div class="field">
+    <%= f.label :Origin %><br />
+    <%= f.text_field :Origin %>
+  </div>
+<div class="field">
+    <%= f.label :Quantity %><br />
+    <%= f.text_field :Quantity %>
+  </div>
+<div class="field">
+    <%= f.label :Observer %><br />
+    <%= f.text_field :Observer %>
+  </div>
+<div class="field">
+    <%= f.label :Record_type %><br />
+    <%= f.text_field :Record_type %>
+  </div>
+<div class="field">
+    <%= f.label :Reference %><br />
+    <%= f.text_field :Reference %>
+  </div>
+<div class="field">
+    <%= f.label :Grid_reference %><br />
+    <%= f.text_field :Grid_reference %>
+  </div>
+<div class="field">
+    <%= f.label :Start_date %><br />
+    <%= f.text_field :Start_date %>
+  </div>
+<div class="field">
+    <%= f.label :End_date %><br />
+    <%= f.text_field :End_date %>
+  </div>
+<div class="field">
+    <%= f.label :Determiner %><br />
+    <%= f.text_field :Determiner %>
+  </div>
+<div class="field">
+    <%= f.label :Comment %><br />
+    <%= f.text_field :Comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Record Species" %>
+  </div>
+<% end %>

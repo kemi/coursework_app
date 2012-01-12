@@ -26,6 +26,9 @@ class PagesController < ApplicationController
 
   def submit_your_sightings
      @title = "Submit your sightings"
+    # @specie = Specie.new if signed_in?
+     #@feed_items = current_user.feed.paginate(:page => params[:page])
+
   end
 
   def about
@@ -35,24 +38,24 @@ class PagesController < ApplicationController
   def contact
      @title = "Contact"
   end
-  def help
-     @title = "Help"
-   end
-def News
-     @title = "News"
-   end
-def FAQ
-     @title = "FAQ"
-   end
-def Vacancies
-     @title = "Vacancies"
-   end
-def Usefullinks
-     @title = "Useful Links"
-   end
-def Terms
-     @title = "Terms and Conditions"
-   end
+ # def help
+     #@title = "Help"
+   #end
+#def News
+    # @title = "News"
+   #end
+#def FAQ
+    # @title = "FAQ"
+   #end
+#def Vacancies
+    # @title = "Vacancies"
+   #end
+#def Usefullinks
+    # @title = "Useful Links"
+   #end
+#def Terms
+     #@title = "Terms and Conditions"
+   #end
 
 
 
