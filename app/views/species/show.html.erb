@@ -1,6 +1,6 @@
 <table class="profile" summary=profile information" border = "1">
   <tr>
-    <td> Species_name <%= @specie.Name %> </td>
+    <td> Name <%= @specie.Specie_Name %> </td>
       <td> Sex <%= @specie.Sex %> </td>
 </tr>
 <tr>
@@ -13,17 +13,18 @@
 </tr>
 <tr>
     <td> Observer <%= @specie.Observer %> </td>
-      <td>Record_type <%= @specie.Record_type %> </td>
+      <td>Record <%= @specie.Record_type %> </td>
 </tr>
 <tr>
-    <td> Observer <%= @specie.Reference %> </td>
-      <td>Record_type <%= @specie.Grid_reference %> </td>
+    <td> Reference <%= @specie.Reference %> </td>
+      <td>Grid <%= @specie.Grid_reference %> </td>
 </tr>
 <tr>
-    <td> Observer <%= @specie.Start_date %> </td>
-      <td>Record_type <%= @specie.End_date %> </td>
+    <td> Start <%= @specie.Start_date %> </td>
+      <td>End <%= @specie.End_date %> </td>
 </tr>
 <tr>
-    <td> Observer <%= @specie.Determiner %> </td>
-      <td>Record_type <%= @specie.Comment %> </td>
+    <td> Determiner <%= @specie.Determiner %> </td>
+      <td>Comment <%= @specie.Comment %> </td>
 </tr>
+</table>

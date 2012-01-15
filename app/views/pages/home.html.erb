@@ -1,29 +1,45 @@
-     <% if signed_in? %>
-  <table class="front" summary="For signed-in users">
-    <tr>
-      <td class="main">
-        <h1 class="micropost">What's up?</h1>
-        <%= render 'shared/micropost_form' %>
-          <%= render 'shared/feed' %>
-      </td>
-      <td class="sidebar round">
-        <%= render 'shared/user_info' %>
-      </td>
-    </tr>
-  </table>
-<% else %>
+     
   
 
     <h1> WELCOME TO SBIC </h1>
     <p style="text-align:justify"> Welcome to the website of the Surrey Biodiversity Infromation Centre, one of many local record centres around the UK. We collect, manage and disseminate wildlife data, providing an information service for the whole of Surrey; this includes the counties of East and West Surrey and the Town of Guildford.Our vision is for a living landscape in surrey that is rich in wildlife and valued by all. 
 Latest Record Centre News & Commentary <br />
 <br />
+Jack O'Lantern <br />
+<br />
+<%= image_tag("Jack O'Lantern.jpg", :alt => "SIBC", :class => "round") %> <br />
+<br />
+
+West Weald fungus recorder Vivien Hodge found this beautiful golden fungi which is saffron-coloured throughout. It is called the Jack O’Lantern Omphalotus illudens. Its vernacular name is partly due to the colour, which is reminiscent of a pumpkin, and partly because the gills on the underside of the mushroom emit an eery glow just like a Jack O’Lantern. Vivien has subsequently confirmed that it does glow quite brilliantly in the dark.
+
+It was recorded in Horsham at the end of July and is only the second record of this species in Surrey so we thought we’d keep it as a Halloween treat for you.
+<br />
 Mistletoe
 <br />
-<%= image_tag("homelogo.png", :alt => "SIBC", :class => "round") %> <br /> </br>
+<%= image_tag("homelogo.png", :alt => "SIBC", :class => "round") %> <br />
+Mistletoe is abundant in some areas of Surrey and it appears to be becoming increasingly common throughout England. Mistletoe is a hemi-parasite on a variety of trees; it photosynthesises using its evergreen leaves, but it supplements this by taking water and nutrients directly from its plant host. Mistletoes translucent white berries are well known to many people and in the past this plant was sometimes grown in ancient orchards so that the farmers could supplement their income by selling the sprigs of Mistletoe at Christmas.
+
+The berries are highly attractive to many birds including the Mistle Thrush, however they have a cunning trick up their sleeve. The berries are incredibly sticky, and once they have passed through the bird it can often have problems extricating itself from the sticky residue encasing the seeds. The birds usually find a way, and this results in the Mistletoe seeds being wiped onto the top of a branch on a new host. </br>
+<br />
+Latest News <br />
+<br />
+<%= image_tag("news.png", :alt => "SIBC", :class => "round") %> <br />
+<br />
+<%= image_tag("News 3.png", :alt => "SIBC", :class => "round") %> <br />
+<br />
+Join Us Today <br />
+By becoming a member of Surrey Wildlife Trust you will be directly supporting our conservation work across the county.
+
+Membership benefits include:
+
+    Surrey Nature, our full-colour membership magazine, published three times a year. Packed with information about our work and wildlife in Surrey's countryside.
+    Wildlife What's On, our diary of events and volunteer work party programme, issued three times a year.
+    Where to go for Wildlife leaflet gives details of our reserves, including a map of Surrey showing where they are.
+To join this group, signup with us.
+
 </p>
 <br />
 
     </p>
  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-<% end %>
+

@@ -1,8 +1,8 @@
 class CreateSpecies < ActiveRecord::Migration
  # def change
   def self.up
-    create_table :specie do |t|
-      t.string :Specie_Name
+    create_table :Species do |t|
+      t.string :name
       t.string :Sex
       t.string :Location
       t.string :County

@@ -16,18 +16,18 @@ def new
       @title = "Sign Up"
       render 'new'
     end
-  #end
   end
+  #end
 def edit
 @specie = Species.find(params[:id])
 @title = "Edit species"
 end
 
 def update
-   @specie = Species.find(params[:id])
-   if @specie.update_attribute(params[:species])
+   @species = Species.find(params[:id])
+   if @species.update_attribute(params[:species])
       flash[:success] = "Species updated!"
-      redirect_to @specie
+      redirect_to @species
     else
       @title = "Edit Species"
       render 'edit'
@@ -36,18 +36,18 @@ def update
   end
 def index
 @title = "All species"
-@specie = Species.paginate(:page => params[:page])
+@species = Species.paginate(:page => params[:page])
 end
 
 
 def show
 @specie = Species.find(params[:id])
-@title = Species.new
+@title = Species.name
 end
 
 
   def destroy
-    Specie.find(params[:id]).destroy
+    Species.find(params[:id]).destroy
     flash[:success] = "Species Destroyed"
     redirect_to species_path
   end

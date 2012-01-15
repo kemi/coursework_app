@@ -1,31 +1,13 @@
 CourseworkApp::Application.routes.draw do
-  #get "pages/News"
+  
    get "species/new"
-match '/News', :to => 'pages#News'
 
-  #get "pages/FAQ"
- match '/FAQ', :to => 'pages#FAQ'
-
-  #get "pages/Vacancies"
-match '/Vacancies', :to => 'pages#Vacancies'
-
-  #get "pages/Useful_Links"
-  match '/Useful Links', :to => 'pages#Usefullinks'
-
-  #get "pages/Terms_and_conditions"
-  match '/Terms and conditions', :to => 'pages#Terms'
-
-  #get "sessions/new"
-
-  #get "users/new"
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
-resources :microposts, :only => [:create, :destroy]
 resources :species
 
      
-   #match '/Add record', :to => 'specie#index'
-   #match '/Delete record', :to => 'specie#index'
+   
    match '/signup', :to => 'users#new'
    match '/signin', :to => 'sessions#new'
    match '/signout', :to => 'sessions#destroy'
@@ -39,21 +21,26 @@ resources :species
   #get "pages/information_advice"
     match '/information_advice', :to => 'pages#information_advice'
 
-  #get "pages/recording_tools"
-    match '/recording_tools', :to => 'species#new'
+ # get "pages/recording_tools"
+    match '/recording_tools', :to => 'pages#recording_tools'
 
-  #get "pages/submit_your_sightings"
-    match '/submit_your_sightings', :to => 'pages#submit_your_sightings'
+ # get "pages/submit_your_sightings"
+    match '/submit_your_sightings', :to => 'species#new'
 
   #get "pages/about"
     match '/about', :to => 'pages#about'
   
-  #get "pages/home"
+ # get "pages/home"
 
   #get "pages/contact"
     match '/contact', :to => 'pages#contact'
-    match '/help', :to => 'pages#help'
+    #match '/help', :to => 'pages#help'
     root :to => 'pages#home'
+
+
+  #get "sessions/new"
+
+  #get "users/new"
 
 
   # The priority is based upon order of creation:

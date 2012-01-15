@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #fff;
+  background: #FFF8DC;
   text-align:center
 }
 
@@ -22,7 +22,7 @@ header img {
 
 section {
   margin-top: 1em;
-  font-size: 140%;
+  font-size: 120%;
   padding: 20px;
   background: #ccc;
   font-family: "Lucida Grande","Lucida Sans", "Arial" 

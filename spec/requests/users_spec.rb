@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe "Users" do
-
+  
   describe "signup" do
-
+    
     describe "failure" do
-
+    
       it "should not make a new user" do
         lambda do
           visit signup_path
@@ -17,9 +17,11 @@ describe "Users" do
           response.should render_template('users/new')
           response.should have_selector("div#error_explanation")
         end.should_not change(User, :count)
-      
-        describe "success" do
+      end
+      end
 
+        describe "success" do
+    
       it "should make a new user" do
         lambda do
           visit signup_path
@@ -33,8 +35,8 @@ describe "Users" do
           response.should render_template('users/show')
         end.should change(User, :count).by(1)
       end
- describe "sign in/out" do
-
+    describe "sign in/out" do
+  
     describe "failure" do
       it "should not sign a user in" do
         visit signin_path
@@ -44,7 +46,7 @@ describe "Users" do
         response.should have_selector("div.flash.error", :content => "Invalid")
       end
     end
-
+  
     describe "success" do
       it "should sign a user in and out" do
         user = Factory(:user)
@@ -59,6 +61,3 @@ describe "Users" do
     end
   end
 end
-    
-  
-
