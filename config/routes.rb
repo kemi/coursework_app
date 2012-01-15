@@ -22,10 +22,10 @@ resources :species
     match '/information_advice', :to => 'pages#information_advice'
 
  # get "pages/recording_tools"
-    match '/recording_tools', :to => 'pages#recording_tools'
+    match '/recording_tools', :to => 'species#new'
 
  # get "pages/submit_your_sightings"
-    match '/submit_your_sightings', :to => 'species#new'
+    match '/submit_your_sightings', :to => 'pages#submit_your_sightings'
 
   #get "pages/about"
     match '/about', :to => 'pages#about'
