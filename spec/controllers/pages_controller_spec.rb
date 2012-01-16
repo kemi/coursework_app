@@ -34,7 +34,7 @@ describe "GET 'enquiry_service'" do
   end
 describe "GET 'recording_tools'" do
     it "should be successful" do
-      get 'recording_tools'
+      get 'Species'
       response.should be_success
     end
      
@@ -48,7 +48,7 @@ describe "GET 'services_support'" do
   end
 describe "GET 'submit_your_sightings'" do
     it "should be successful" do
-      get 'species'
+      get 'submit_your_sightings'
       response.should be_success
     end
      

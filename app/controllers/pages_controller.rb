@@ -14,9 +14,9 @@ class PagesController < ApplicationController
      @title = "Services and support"
   end
 
-  def information_advice
-     @title = "Information and advice"
-  end
+  #def information_advice
+     #@title = "Information and advice"
+  #end
 
   def recording_tools
      @title = "Recording Tools"
@@ -24,7 +24,7 @@ class PagesController < ApplicationController
   end
 
   def submit_your_sightings
-     @title = "Submit your sightings"
+     @title = "Submit your Sightings"
    
   end
 
